@@ -1,0 +1,16 @@
+interface:
+  display_name: "Hive Axyl"
+  short_description: "Integrate SDKs and operate the Hive Axyl console."
+  brand_color: "#2563EB"
+  default_prompt: "Use $hive-axyl to set up my game SDK and console project."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "hive_axyl"
+      description: "Hive Axyl console MCP server for projects, metrics, live operations, payments, push, players, and platform configuration."
+      transport: "streamable_http"
+      url: "https://gw-test-gcl.c2xstation.net:8095/mcp"
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,20 @@
+{
+  "name": "hive-axyl",
+  "interface": {
+    "displayName": "Hive Axyl"
+  },
+  "plugins": [
+    {
+      "name": "hive-axyl-codex",
+      "source": {
+        "source": "local",
+        "path": "./plugins/hive-axyl-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

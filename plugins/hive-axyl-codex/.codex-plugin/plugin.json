@@ -1,0 +1,36 @@
+{
+  "name": "hive-axyl-codex",
+  "version": "0.1.0+codex.20260710071407",
+  "description": "Codex workflows and MCP tools for Hive Axyl SDK integration and console operations.",
+  "author": {
+    "name": "CONX"
+  },
+  "homepage": "https://conx-dev.github.io/hive-axyl-docs/",
+  "repository": "https://github.com/conx-dev/hive-axyl-codex",
+  "keywords": [
+    "hive-axyl",
+    "sdk",
+    "mcp",
+    "games",
+    "console"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Hive Axyl Codex",
+    "shortDescription": "Use Hive Axyl SDKs and operate the game console.",
+    "longDescription": "Hive Axyl Codex helps Codex integrate Hive Axyl SDKs and operate console projects, metrics, credentials, webhooks, live operations, payments, push campaigns, players, and sanctions through MCP.",
+    "developerName": "CONX",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Connect Codex to my Hive Axyl console.",
+      "Set up Hive Axyl in my game project.",
+      "Show my Hive Axyl game metrics."
+    ],
+    "brandColor": "#2563EB"
+  },
+  "mcpServers": "./.mcp.json"
+}

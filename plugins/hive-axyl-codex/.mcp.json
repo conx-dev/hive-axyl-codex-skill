@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "hive_axyl": {
+      "type": "http",
+      "url": "https://gw-test-gcl.c2xstation.net:8095/mcp"
+    }
+  }
+}

@@ -22,14 +22,14 @@ Use this skill for external Hive Axyl SDK usage and console automation. Keep the
 4. Prefer browser handoff. Open the connection URL when browser control is available, but have the user enter login or signup credentials only in the Hive Axyl console. Never ask them to paste a password into chat.
 5. The connection page returns after authentication and issues a five-minute, one-time code. Ask the user to copy only that code and paste it into the same conversation. Do not inspect, extract, or repeat it through browser tooling.
 6. Call `console_connect` immediately with the code, then call `console_session` again. Confirm success only when it reports `authenticated: true`.
-7. If browser control is unavailable, provide the same connection URL and the manual steps from `references/console-browser.md`. Do not silently switch to MCP signup or login.
+7. If browser control is unavailable, provide the same connection URL and the manual steps from `references/console-browser.md`. Do not silently switch to MCP login.
 8. Call `console_login` only when the user explicitly provides their console admin email and password and asks Codex to log in.
-9. Use `console_signup` only when the user explicitly provides email, name, password, and exact confirmation phrase `SIGNUP <email>` in their own message.
+9. Console signup requires browser email verification. Never ask for or accept a signup password through MCP.
 10. After authentication, use MCP tools for console reads and management instead of browser-controlling `console-web`.
 11. Never expose or summarize the admin JWT.
 12. Ask for the exact confirmation phrase documented in `references/console-mcp.md` before destructive, access-control, or player-sanction tools.
-13. Treat issued API keys, server keys, and connection codes as secrets. Use a connection code only as the immediate `console_connect` input; never repeat it or place it in command lines or assistant-authored logs.
-14. Use credential values and passwords only when the user provides them. Never read them back, summarize them, or include them in logs.
+13. Treat issued API keys, server keys, invitation links, and connection codes as secrets. Use a connection code only as the immediate `console_connect` input; never repeat it or place it in command lines or assistant-authored logs.
+14. Use credential values and login passwords only when the user provides them. Never read them back, summarize them, or include them in logs.
 
 ## SDK Workflow
 

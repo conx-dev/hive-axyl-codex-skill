@@ -29,10 +29,10 @@ The local endpoints are Console API `http://localhost:8082`, Console web `http:/
 
 ## Authentication And Account
 
-- `console_signup`, `console_login`, `console_connect`, `console_logout`, `console_session`
+- `console_login`, `console_connect`, `console_logout`, `console_session`
 - `change_console_password`, `issue_console_connection_code`
 
-Call `console_session` first. If unauthenticated, prefer `https://gw-test-gcl.c2xstation.net:8099/connect/codex` followed by `console_connect`, then call `console_session` again to verify success. Use `console_signup` only when the user provided email, name, password, and exact `SIGNUP <email>` confirmation.
+Call `console_session` first. If unauthenticated, prefer `https://gw-test-gcl.c2xstation.net:8099/connect/codex` followed by `console_connect`, then call `console_session` again to verify success. New accounts must complete email verification in the console browser.
 
 `issue_console_connection_code` requires an already authenticated MCP session and only issues a code for another MCP session. Never use it to bootstrap the current session.
 
@@ -40,6 +40,8 @@ Call `console_session` first. If unauthenticated, prefer `https://gw-test-gcl.c2
 
 - Projects: `create_project`, `get_project`, `list_projects`, `update_project_status`, `delete_project`, `upsert_project_app_identifier`
 - Members: `list_project_members`, `add_project_member`, `update_project_member_role`, `remove_project_member`
+
+`add_project_member` sends an invitation email. The requested role is granted only after the recipient opens the link and explicitly accepts the invitation.
 - API keys: `issue_api_key`, `list_api_keys`, `revoke_api_key`
 
 ## Metrics
@@ -60,7 +62,7 @@ Credential values and webhook signing secrets are write-only. Responses expose o
 ## Live Operations
 
 - Mailbox: `list_mails`, `create_mail`, `update_mail`, `delete_mail`
-- Maintenance: `get_maintenance`, `set_maintenance`, `clear_maintenance`, `preview_maintenance`
+- Maintenance: `get_maintenance`, `list_maintenance_histories`, `set_maintenance`, `clear_maintenance`, `preview_maintenance`
 - Notices: `list_notices`, `create_notice`, `update_notice`, `delete_notice`
 - Remote push: `create_push_campaign`, `update_push_campaign`, `cancel_push_campaign`, `list_push_campaigns`, `list_push_deliveries`
 

@@ -71,7 +71,7 @@ dependencies: [
 ```json
 {
   "dependencies": {
-    "com.hiveaxyl.sdk": "https://github.com/conx-dev/hive-axyl-unity-sdk.git#0.1.0"
+    "com.hiveaxyl.sdk": "https://github.com/conx-dev/hive-axyl-unity-sdk.git#0.4.0"
   }
 }
 ```
@@ -80,6 +80,7 @@ dependencies: [
 
 ```bash
 git submodule add https://github.com/conx-dev/hive-axyl-godot-sdk.git addons/hive_axyl
+git -C addons/hive_axyl checkout 0.4.0
 ```
 
 ## Integration Notes

@@ -1,6 +1,6 @@
 {
   "name": "hive-axyl-codex",
-  "version": "0.1.0+codex.20260720025215",
+  "version": "0.1.0+codex.20260720101902",
   "description": "Codex workflows and MCP tools for Hive Axyl SDK integration and console operations.",
   "author": {
     "name": "CONX"

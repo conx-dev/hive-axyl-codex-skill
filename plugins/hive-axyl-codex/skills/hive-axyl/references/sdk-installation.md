@@ -42,7 +42,7 @@ App module `build.gradle.kts`:
 
 ```kotlin
 dependencies {
-    implementation("io.github.conx-dev:hive-axyl-android-sdk:0.1.0")
+    implementation("io.github.conx-dev:hive-axyl-android-sdk:0.2.0")
 }
 ```
 
@@ -89,3 +89,4 @@ git -C addons/hive_axyl checkout 0.4.0
 - Use Guest only when the console login-provider configuration exposes it.
 - Keep OAuth client secrets and payment verification credentials out of game clients.
 - Store full API keys outside source control. The console shows full API keys only once after issue.
+- For Android Apple login, use SDK `0.2.0` or later, provide `context`, and pass the callback `Uri` to `completeAppleLogin(uri)` without parsing tokens from it.

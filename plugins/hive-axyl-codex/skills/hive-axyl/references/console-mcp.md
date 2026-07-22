@@ -50,6 +50,8 @@ Call `console_session` first. If unauthenticated, prefer `https://gw-test-gcl.c2
 - `get_revenue_stats`, `get_monthly_revenue_stats`, `get_retention_stats`
 
 Dates use UTC `YYYY-MM-DD`; months use `YYYY-MM`.
+`get_daily_stats` and `get_revenue_stats` take one `month`; the current UTC month ends at today.
+`get_retention_stats` takes one `end_date`, derives the eight cohort dates ending there, and accepts only D1-D7 in `retention_days`.
 
 ## Credentials And Game Server
 
